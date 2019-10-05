@@ -83,13 +83,17 @@ if(session.getAttribute("username")==null)
   </div>
 </nav>
 
-<form class="container mx-auto my-4 bg-light py-2" style="width: 50%; font-weight: bold">
-<h1 class="text-center">Donate Blood</h1>
+<form class="container mx-auto my-4 bg-light py-2" style="width: 50%; font-weight: bold" action="organupdate" method="get">
+<h1 class="text-center">Request for Organ</h1>
 <hr class="w-50">
 	<div class="form-group mt-4">
 		<label for="exampleInputName">Name</label>
-	    <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter name">
+	    <input type="name" class="form-control" id="exampleInputName" name="uname" aria-describedby="nameHelp" placeholder="Enter name">
 	</div>
+	<div class="form-group">
+    <label for="exampleInputNumber">Age</label>
+    <input class="form-control" id="exampleInputNumber" placeholder="Number">
+  </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -101,18 +105,10 @@ if(session.getAttribute("username")==null)
     <small id="emailHelp" class="form-text text-muted">We'll never share your contact number with anyone else.</small>
   </div>
   <div class="form-group mt-4">
-		<label for="exampleInputName">Blood Group</label>
-	    <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter name">
-	</div>
-	<div class="form-group">
-  <label>Any Disease(Mention if any)</label>
-  	<textarea class="form-control"  placeholder="E.g.Diabetes"></textarea>
-  </div>
-  <div class="form-group">
-  	<label>Address</label>
-  	<textarea class="form-control"></textarea>
-  </div>
-  <button type="submit" class="btn btn-danger"><a class="text-white" href="bloodmap.jsp">Submit</a></button>
+		<label for="exampleInputName">Organ You Want</label>
+	    <input type="name" class="form-control" id="exampleInputName" name="organ" aria-describedby="nameHelp" placeholder="Enter the organ">
+	</div> 
+  <button type="submit" class="btn btn-danger"><a class="text-white" href="main.jsp">Submit</a></button>
 </form>
 
 <section class="row mb-2">

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,7 +16,7 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
-<title>HealthyLife.	org</title>
+<title>HealthyLife.org</title>
 </head>
 <body>
 
@@ -44,16 +46,16 @@
       </li>
       <li class="nav-item dropdown mr-3">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Donations
+          Contribute
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="blood.jsp">Donate Blood <i class="fa fa-tint" aria-hidden="true"></i></a>
-          <a class="dropdown-item" href="organ.jsp">Donate Organ <i class="fa fa-heart" aria-hidden="true"></i></a>
-          <a class="dropdown-item" href="money.jsp">Donate Money <i class="fa fa-money" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="organ.jsp">Request for Organ <i class="fa fa-heart" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="money.jsp">Contribute Money <i class="fa fa-money" aria-hidden="true"></i></a>
         </div>
       </li>
       <li class="nav-item mr-3">
-        <a class="nav-link" href="facts.html">Facts and Figures</a>
+        <a class="nav-link" href="emergency.jsp">Emergency</a>
       </li>
       <li class="nav-item dropdown mr-3">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -63,7 +65,7 @@
           <a class="dropdown-item" href="" data-toggle="modal" data-target="#loginModal">Log In <i class="fa fa-sign-in" aria-hidden="true"></i></a>
           <a class="dropdown-item" href="" data-toggle="modal" data-target="#signupModal">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a>
           <a class="dropdown-item" href="feedback.jsp">Feedback <i class="fa fa-commenting" aria-hidden="true"></i></a>
-          <a class="dropdown-item" href="report.jsp">Report Doctor <i class="fa fa-flag" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="report1.jsp">Report Doctor <i class="fa fa-flag" aria-hidden="true"></i></a>
         </div>
       </li>
     </ul>
@@ -130,7 +132,12 @@
 		<div class="col-lg-6">
 			<h3 class="text-dark" style="font-family: 'Josefin Sans', sans-serif;">Know the Facts</h3>
 			<hr>
-			<p style="font-family: Courgette, cursive;"><font size=3>Primary Healthcare care is not heroic, but in an Indian rural setting where people travel greater than 50 km even to seek basic healthcare, it's the need of the hour. The opportunity to seek quality healthcare is a fundamental necessity that every individual should have access to, irrespective of the circumstances in which they are born. To achieve this dream, HealthyLife.org was started in 2019 with the vision to see a world where every individual has an opportunity and means to access equitable and affordable healthcare.
+			<p style="font-family: Courgette, cursive;"><font size=3>Primary Healthcare care is not heroic, but in an Indian 
+			rural setting where people travel greater than 50 km even to seek basic healthcare, it's the need of the hour. The 
+			opportunity to seek quality healthcare is a fundamental necessity that every individual should have access to, 
+			irrespective of the circumstances in which they are born. To achieve this dream, HealthyLife.org was started in 2019 
+			with the vision to see a world where every individual has an opportunity and means to access equitable and affordable
+			 healthcare.
 			</font></p>
 			<button type="button" class="btn btn-primary"><a href="about.jsp" class="text-white">View More...</a></button>
 		</div>
@@ -140,7 +147,11 @@
 		<div class="col-lg-6">
 			<h3 class="text-dark" style="font-family: 'Josefin Sans', sans-serif;">What We Do</h3>
 			<hr>
-			<p style="font-family: Courgette, cursive;"><font size=3>HealthyLife is an innovative health-tech enterprise that provides affordable, accessible and quality primary healthcare in rural and semi-urban India using a judicious mix of technology and on-ground interventions to improve health outcomes. HealthyLife operates 'e-Doctor' clinics to provide nurse-assisted online medical consultations by qualified doctors, diagnostic services and referral services to secondary and tertiary care facilities, through a financially sustainable model.</font></p>
+			<p style="font-family: Courgette, cursive;"><font size=3>HealthyLife is an innovative health-tech enterprise that 
+			provides affordable, accessible and quality primary healthcare in rural and semi-urban India using a judicious mix of
+			 technology and on-ground interventions to improve health outcomes. HealthyLife operates 'e-Doctor' clinics to 
+			 provide nurse-assisted online medical consultations by qualified doctors, diagnostic services and referral services
+			  to secondary and tertiary care facilities, through a financially sustainable model.</font></p>
 			<button type="button" class="btn btn-primary" padding=2 ><a href="about.jsp" class="text-white">View More...</a></button>
 		</div>
 		<div class="col-lg-6">
@@ -233,6 +244,10 @@
 	</div>
 </section>
 
+<marquee class="bg-primary mb-5 py-2 text-white">
+Shubham of age 20 needs urgent kidney transplant   <button>Donate Him</button>
+</marquee>
+
 <section id="footer">
 		<div class="container">
 			<div class="row text-center text-xs-center text-sm-left text-md-left">
@@ -249,9 +264,9 @@
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<h5>Quick links</h5>
 					<ul class="list-unstyled quick-links">
-						<li><a href="" data-toggle="modal" data-target="loginModal"><i class="fa fa-angle-double-right"></i>Log In</a></li>
-						<li><a href="" data-toggle="modal" data-target="signupModal"><i class="fa fa-angle-double-right"></i>Sign Up</a></li>
-						<li><a href="Feedback.jsp"><i class="fa fa-angle-double-right"></i>Feedback</a></li>
+						<li><a href="login.jsp" data-toggle="modal" data-target="loginModal"><i class="fa fa-angle-double-right"></i>Log In</a></li>
+						<li><a href="signup.jsp" data-toggle="modal" data-target="signupModal"><i class="fa fa-angle-double-right"></i>Sign Up</a></li>
+						<li><a href="feedback.jsp"><i class="fa fa-angle-double-right"></i>Feedback</a></li>
 						<li><a href="report.jsp"><i class="fa fa-angle-double-right"></i>Report a Doctor</a></li>			
 					
 					</ul>
@@ -299,16 +314,16 @@
 		          <span aria-hidden="true">&times;</span>
 		        </button>
 		      </div>
-		      <form action="Adminlogin" method="post">
+		      <form action="login" method="post">
 		      <div class="modal-body" style="font-weight: bold">
 		        
 				  <div class="form-group">
 				    <label for="exampleInputName1">Username</label>
-				    <input name="adminuname" type="text" class="form-control" placeholder="Enter username">
+				    <input name="uname" type="text" class="form-control" placeholder="Enter username">
 				  </div>
 				  <div class="form-group">
 				    <label for="exampleInputPassword1">Password</label>
-				    <input name="adminpass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				    <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 				  </div>
 		      </div>
 		      <div class="modal-footer">

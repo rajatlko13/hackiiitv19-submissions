@@ -14,7 +14,7 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
-<title>HealthyLife.	org</title>
+<title>HealthyLife.org</title>
 </head>
 <body>
 
@@ -35,7 +35,7 @@ if(session.getAttribute("username")==null)
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active ml-5 mr-3">
-        <a class="nav-link" href="main.jsp">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item mr-3">
         <a class="nav-link" href="about.jsp">About</a>
@@ -52,16 +52,16 @@ if(session.getAttribute("username")==null)
       </li>
       <li class="nav-item dropdown mr-3">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Donations
+          Contribute
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="blood.jsp">Donate Blood <i class="fa fa-tint" aria-hidden="true"></i></a>
-          <a class="dropdown-item" href="organ.jsp">Donate Organ <i class="fa fa-heart" aria-hidden="true"></i></a>
-          <a class="dropdown-item" href="money.jsp">Donate Money <i class="fa fa-money" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="organ.jsp">Request for Organ <i class="fa fa-heart" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="money.jsp">Contribute Money <i class="fa fa-money" aria-hidden="true"></i></a>
         </div>
       </li>
       <li class="nav-item mr-3">
-        <a class="nav-link" href="facts.html">Facts and Figures</a>
+        <a class="nav-link" href="emergency.jsp">Emergency</a>
       </li>
       <li class="nav-item dropdown mr-3">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -69,7 +69,7 @@ if(session.getAttribute("username")==null)
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="feedback.jsp">Feedback <i class="fa fa-commenting" aria-hidden="true"></i></a>
-          <a class="dropdown-item" href="report.jsp">Report Doctor <i class="fa fa-flag" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="report1.jsp">Report Doctor <i class="fa fa-flag" aria-hidden="true"></i></a>
         </div>
       </li>
       <li class="nav-item mr-3 mt-1">

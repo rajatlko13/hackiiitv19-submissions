@@ -58,7 +58,7 @@ if(session.getAttribute("username")==null)
           <a class="dropdown-item" href="money.jsp">Contribute Money <i class="fa fa-money" aria-hidden="true"></i></a>
         </div>
       </li>
-      <li class="nav-item mr-3">
+      <li class="nav-item active mr-3">
         <a class="nav-link" href="emergency.jsp">Emergency</a>
       </li>
       <li class="nav-item dropdown mr-3">
@@ -83,36 +83,17 @@ if(session.getAttribute("username")==null)
   </div>
 </nav>
 
-<form class="container mx-auto my-4 bg-light py-2" style="width: 50%; font-weight: bold">
-<h1 class="text-center">Donate Blood</h1>
-<hr class="w-50">
-	<div class="form-group mt-4">
-		<label for="exampleInputName">Name</label>
+<div class="text-center mt-3">
+  <img  width=700px height=400px src="https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/GVK_Ambulance.jpg?itok=C7v71HvH" class="rounded" alt="...">
+</div>
+
+
+<form class="container mx-auto mb-2 bg-light py-2" style="width: 50%; font-weight: bold">
+<div class="form-group mt-4">
+		<label for="exampleInputName">Enter Your Location</label>
 	    <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter name">
-	</div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputNumber">Contact No.</label>
-    <input class="form-control" id="exampleInputNumber" placeholder="Number">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your contact number with anyone else.</small>
-  </div>
-  <div class="form-group mt-4">
-		<label for="exampleInputName">Blood Group</label>
-	    <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter name">
-	</div>
-	<div class="form-group">
-  <label>Any Disease(Mention if any)</label>
-  	<textarea class="form-control"  placeholder="E.g.Diabetes"></textarea>
-  </div>
-  <div class="form-group">
-  	<label>Address</label>
-  	<textarea class="form-control"></textarea>
-  </div>
-  <button type="submit" class="btn btn-danger"><a class="text-white" href="bloodmap.jsp">Submit</a></button>
+</div>
+<button type="submit" class="btn btn-danger">Get Ambulance!</button>
 </form>
 
 <section class="row mb-2">

@@ -33,7 +33,7 @@ if(session.getAttribute("username")==null)
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ml-5 mr-3">
-        <a class="nav-link" href="LoginPage.jsp">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="LoginPage.jsp.jsp">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item mr-3">
         <a class="nav-link" href="about.jsp">About</a>
@@ -61,7 +61,7 @@ if(session.getAttribute("username")==null)
       <li class="nav-item mr-3">
         <a class="nav-link" href="emergency.jsp">Emergency</a>
       </li>
-      <li class="nav-item dropdown mr-3">
+      <li class="nav-item active dropdown mr-3">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Others
         </a>
@@ -84,7 +84,7 @@ if(session.getAttribute("username")==null)
 </nav>
 
 <form class="container mx-auto my-4 bg-light py-2" style="width: 50%; font-weight: bold">
-<h1 class="text-center">Donate Blood</h1>
+<h1 class="text-center">Feedback Form</h1>
 <hr class="w-50">
 	<div class="form-group mt-4">
 		<label for="exampleInputName">Name</label>
@@ -100,20 +100,18 @@ if(session.getAttribute("username")==null)
     <input class="form-control" id="exampleInputNumber" placeholder="Number">
     <small id="emailHelp" class="form-text text-muted">We'll never share your contact number with anyone else.</small>
   </div>
-  <div class="form-group mt-4">
-		<label for="exampleInputName">Blood Group</label>
-	    <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter name">
-	</div>
-	<div class="form-group">
-  <label>Any Disease(Mention if any)</label>
-  	<textarea class="form-control"  placeholder="E.g.Diabetes"></textarea>
-  </div>
   <div class="form-group">
-  	<label>Address</label>
+  	<label>Message</label>
   	<textarea class="form-control"></textarea>
   </div>
-  <button type="submit" class="btn btn-danger"><a class="text-white" href="bloodmap.jsp">Submit</a></button>
+  <!-- <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+  <button type="submit" class="btn btn-danger">Submit</button>
 </form>
+
+
 
 <section class="row mb-2">
 <footer class="container-fluid">

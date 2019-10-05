@@ -15,6 +15,13 @@
 <title>HealthyLife.org</title>
 </head>
 <body>
+<%
+response.setHeader("Cache-Control","no-cache,no-store,must revalidate");
+if(session.getAttribute("username")==null)
+{
+	response.sendRedirect("main.jsp");
+}
+%>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-1">
   <a class="navbar-brand" href="#"><i class="fa fa-user-md"></i> HealthyLife.org <i class="fa fa-plus-square" aria-hidden="true"></i></a>
@@ -25,7 +32,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ml-5 mr-3">
-        <a class="nav-link" href="main.jsp">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="LoginPage.jsp">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active mr-3">
         <a class="nav-link" href="about.jsp">About</a>
@@ -42,16 +49,16 @@
       </li>
       <li class="nav-item dropdown mr-3">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Donations
+          Contribute
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="blood.jsp">Donate Blood <i class="fa fa-tint" aria-hidden="true"></i></a>
-          <a class="dropdown-item" href="organ.jsp">Donate Organ <i class="fa fa-heart" aria-hidden="true"></i></a>
-          <a class="dropdown-item" href="money.jsp">Donate Money <i class="fa fa-money" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="organ.jsp">Request for Organ <i class="fa fa-heart" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="money.jsp">Contribute Money <i class="fa fa-money" aria-hidden="true"></i></a>
         </div>
       </li>
       <li class="nav-item mr-3">
-        <a class="nav-link" href="facts.html">Facts and Figures</a>
+        <a class="nav-link" href="emergency.jsp">Emergency</a>
       </li>
       <li class="nav-item dropdown mr-3">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -61,6 +68,11 @@
           <a class="dropdown-item" href="feedback.jsp">Feedback <i class="fa fa-commenting" aria-hidden="true"></i></a>
           <a class="dropdown-item" href="report1.jsp">Report Doctor <i class="fa fa-flag" aria-hidden="true"></i></a>
         </div>
+      </li>
+      <li class="nav-item mr-3 mt-1">
+        <form action="Logout">
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+        </form>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -76,6 +88,18 @@
 </p>
   <hr>
   <p>Gateway to Living a Healthy Life</p>
+</div>
+
+<div class="container my-5">
+<p>Primary Healthcare care is not heroic, but in an Indian rural setting where people travel greater than 50 km even to seek
+ basic healthcare, it's the need of the hour. The opportunity to seek quality healthcare is a fundamental necessity that every 
+ individual should have access to, irrespective of the circumstances in which they are born. To achieve this dream, 
+ HealthyLife.org was started in 2019 with the vision to see a world where every individual has an opportunity and means to 
+ access equitable and affordable healthcare.HealthyLife is an innovative health-tech enterprise that provides affordable, 
+ accessible and quality primary healthcare in rural and semi-urban India using a judicious mix of technology and on-ground 
+ interventions to improve health outcomes. HealthyLife operates 'e-Doctor' clinics to provide nurse-assisted online medical 
+ consultations by qualified doctors, diagnostic services and referral services to secondary and tertiary care facilities, 
+ through a financially sustainable model.</p>
 </div>
 
 	<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

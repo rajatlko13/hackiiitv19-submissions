@@ -16,6 +16,14 @@
 </head>
 <body>
 
+<%
+response.setHeader("Cache-Control","no-cache,no-store,must revalidate");
+if(session.getAttribute("username")==null)
+{
+	response.sendRedirect("main.jsp");
+}
+%>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-1">
   <a class="navbar-brand" href="#"><i class="fa fa-user-md"></i> HealthyLife.org <i class="fa fa-plus-square" aria-hidden="true"></i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +33,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ml-5 mr-3">
-        <a class="nav-link" href="main.jsp">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="LoginPage.jsp">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item mr-3">
         <a class="nav-link" href="about.jsp">About</a>
@@ -40,18 +48,17 @@
           <a class="dropdown-item" href="equipment.jsp">Equipments for Disabled <i class="fa fa-wheelchair-alt" aria-hidden="true"></i></a>
         </div>
       </li>
-      <li class="nav-item active dropdown mr-3">
+      <li class="nav-item dropdown mr-3">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Donations
+          Contribute
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="blood.jsp">Donate Blood <i class="fa fa-tint" aria-hidden="true"></i></a>
-          <a class="dropdown-item" href="organ.jsp">Donate Organ <i class="fa fa-heart" aria-hidden="true"></i></a>
-          <a class="dropdown-item" href="money.jsp">Donate Money <i class="fa fa-money" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="organ.jsp">Request for Organ <i class="fa fa-heart" aria-hidden="true"></i></a>
+          <a class="dropdown-item" href="money.jsp">Contribute Money <i class="fa fa-money" aria-hidden="true"></i></a>
         </div>
-      </li>
-      <li class="nav-item mr-3">
-        <a class="nav-link" href="facts.html">Facts and Figures</a>
+      </li>      <li class="nav-item mr-3">
+        <a class="nav-link" href="emergency.jsp">Emergency</a>
       </li>
       <li class="nav-item dropdown mr-3">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
