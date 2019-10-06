@@ -82,10 +82,11 @@
       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active" ></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://www.brunk.com/wp-content/uploads/2018/11/Medical_Devices01_1920x1080.jpg" alt="..." width="1400" height="500">
+        <img src="https://ayurvedabygiardino.ch/wp-content/uploads/2016/07/AYU_Yoga-Garden_RGB_Low_GBA_01.jpg" alt="..." width="1400" height="500">
         <div class="carousel-caption d-none d-md-block">      
           <p><font size=5>"To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear."</font></p>
         </div>
@@ -97,10 +98,16 @@
        </div>
       </div>
       <div class="carousel-item">
-        <img src="https://wallpaperaccess.com/full/136934.jpg" alt="..." width="1400" height="500">
+        <img src="https://ichef.bbci.co.uk/news/1024/branded_news/7BFE/production/_97724713_gettyimages-94918539.jpg" alt="..." width="1400" height="500">
         <div class="carousel-caption d-none d-md-block">      
-          <p><font size=5 class="text-dark">"Good health is not something we can buy. However, it can be an extremely valuable savings account."</font></p>
+          <p><font size=5>"Good health is not something we can buy. However, it can be an extremely valuable savings account."</font></p>
         </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.hrhcare.org/wp-content/uploads/2014/04/Emergency-Care.jpg" alt="..." width="1400" height="500">
+        <div class="carousel-caption d-none d-md-block">  
+        <p><font size=5>"To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear."</font></p>
+       </div>
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
